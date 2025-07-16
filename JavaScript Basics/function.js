@@ -15,3 +15,6 @@ function colorizer(item, color){
 
 const x = colorizer('desk', 'red');
 console.log(x);
+
+y = 'hello'
+console.log(typeof y);
