@@ -26,3 +26,9 @@ for (let i = 0; i < btnsShowModalWindow.length; i++) {
 // btn close modal
 btnCloseModalWindow.addEventListener('click', addHiddenClass);
 overlay.addEventListener('click', addHiddenClass);
+
+//keybdown
+// check class with help contains
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modalWindow.classList.contains('hidden')) addHiddenClass();
+});
