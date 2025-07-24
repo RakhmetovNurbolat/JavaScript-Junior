@@ -561,31 +561,340 @@ const japaneseRestaurant = {
 /* ----------------------------------------------- ( Set ) ---------------------------------------------------- */
 // Remove duplicates
 
-const orders = new Set(['Sushi', 'Ramen', 'Sushi', 'Tempura', 'Ramen', 'Sushi']);
-console.log(orders);
+// const orders = new Set(['Sushi', 'Ramen', 'Sushi', 'Tempura', 'Ramen', 'Sushi']);
+// console.log(orders);
 
-console.log(new Set('Hello'));
-console.log(new Set());
-console.log(orders.size);
-console.log(orders.has('Sushi'));
-console.log(orders.has('Pizza'));
+// console.log(new Set('Hello'));
+// console.log(new Set());
+// console.log(orders.size);
+// console.log(orders.has('Sushi'));
+// console.log(orders.has('Pizza'));
 
-orders.add('Edamame');
-orders.add('Edamame');
+// orders.add('Edamame');
+// orders.add('Edamame');
 
-orders.delete('Tempura');
+// orders.delete('Tempura');
 
-// orders.clear();
-console.log(orders);
+// // orders.clear();
+// console.log(orders);
 
-for (const order of orders) {
-  console.log(order);
-}
+// for (const order of orders) {
+//   console.log(order);
+// }
 
-const mealIngredients = ['Rice', 'Pepper', 'Garlic', 'Pepper', 'Garlic', 'Meat', 'Meat', 'Garlic'];
-console.log(new Set(mealIngredients).size);
-const mealIngredientsSet = new Set(mealIngredients);
-console.log(mealIngredientsSet);
+// const mealIngredients = ['Rice', 'Pepper', 'Garlic', 'Pepper', 'Garlic', 'Meat', 'Meat', 'Garlic'];
+// console.log(new Set(mealIngredients).size);
+// const mealIngredientsSet = new Set(mealIngredients);
+// console.log(mealIngredientsSet);
 
-const mealIngredientsUnique = [...mealIngredientsSet];
-console.log(mealIngredientsUnique);
+// const mealIngredientsUnique = [...mealIngredientsSet];
+// console.log(mealIngredientsUnique);
+
+/* ----------------------------------------------- ( Map ) ---------------------------------------------------- */
+
+// const restaurant = new Map();
+// restaurant.set('name', "McDonald's");
+// restaurant.set(1, 'London, England');
+// restaurant.set(2, 'Paris, France');
+// restaurant.set(3, 'Kiev, Ukraine');
+
+// restaurant
+//   .set('categories', ['Japanese', 'Sushi', 'Vegetarian', 'Organic'])
+//   .set('open', 10)
+//   .set('close', 23)
+//   .set(true, 'Bench is open :)')
+//   .set(false, 'Bench is closed :(');
+
+// // console.log(restaurant.get('name'));
+// // console.log(restaurant.get(true));
+// // console.log(restaurant.get(3));
+
+// // const currentTime = 22;
+
+// // console.log(restaurant.get(restaurant.get('open') <= currentTime && currentTime < restaurant.get('close')));
+// console.log(restaurant.has('categories'));
+// console.log(restaurant.delete(1));
+// // restaurant.clear();
+// const arr = [1, 2, 3];
+// restaurant.set(arr, 'hello');
+// console.log(restaurant);
+// console.log(restaurant.size);
+// console.log(restaurant.get(arr));
+
+/* ---------------------------------------------- (Map iter) ---------------------------------------------- */
+
+// const question = new Map([
+//   ['question', 'What is your favorite programming language'],
+//   [1, 'JavaScript'],
+//   [2, 'Java'],
+//   [3, 'Python'],
+//   ['correctAnswer', 1],
+//   [true, 'Correct answer :D'],
+//   [false, 'This is incorrect :( Try again'],
+// ]);
+
+// // console.log(question);
+
+// // //Converting objects to maps
+// // const workingHoursMap = new Map(Object.entries(workingHours));
+// // // console.log(workingHoursMap);
+
+// // console.log(question.get('question'));
+
+// // for (const [key, value] of question) {
+// //   if (typeof key === 'number') {
+// //     console.log(`${key}: ${value}`);
+// //   }
+// // }
+
+// // const answer = Number(prompt('Choose the option number'));
+
+// // console.log(question.get(answer === question.get('correctAnswer')));
+
+// // converting maps to arrays
+// console.log([...question]);
+// console.log(question.keys());
+// console.log(question.values());
+// console.log(question.entries());
+
+/* ---------------------------------------------- (Which structure data use )----------------------------------- */
+// array or set
+// object or Map
+/* -----------------------------------------------(Task Three)------------------------------------------------*/
+// Let's get on with our soccer betting app ⚽💰!
+// This time we have a map called events (see below) with a log of events that occurred during the game. The values ​​are the events themselves, and the keys are the minutes at which each event happened (the match had 90 minutes plus extra time).
+// Your tasks:
+// 1. Create an array of gameEvents with different game events that can happen (no duplicates).
+// 2. After the end of the game, it turned out that the yellow card from minute 75 was unfair. So remove this event from the game events log.
+// 3. Calculate and log the following in the console: “On average, an event happened every 11 minutes” (keep in mind that there are 90 minutes in the game).
+// 4. Loop over the events map and log each item to the console, with mark whether it is in the first or second half (after 45 minutes) of the game, for example:
+// [FIRST HALF] 19:  Goal
+
+// const events = new Map([
+//   [19, 'Goal'],
+//   [21, 'Substitution'],
+//   [43, 'Goal'],
+//   [56, 'Substitution'],
+//   [69, 'Yellow card'],
+//   [73, 'Substitution'],
+//   [75, 'Yellow card'],
+//   [79, 'Substitution'],
+//   [81, 'Red card'],
+//   [93, 'Goal'],
+// ]);
+
+// const game = {
+//   team1: 'REAL MADRID',
+//   team2: 'BARCELONA',
+//   players: [
+//     [
+//       'Courtois',
+//       'Vazquez',
+//       'Militao',
+//       'Nacho',
+//       'Mendy',
+//       'Casemiro',
+//       'Valverde',
+//       'Modrich',
+//       'Kroos',
+//       'Vinicius',
+//       'Benzema',
+//     ],
+//     ['Stegen', 'Mingueza', 'Araujo', 'Lenglet', 'Dest', 'Busquets', 'Jong', 'Alba', 'Messi', 'Pedri', 'Dembele'],
+//   ],
+//   score: '2:1',
+//   scored: ['Kroos', 'Benzema', 'Mingueza'],
+//   date: 'Apr 10th, 2021',
+//   odds: {
+//     team1: 1.48,
+//     draw: 2.53,
+//     team2: 4.25,
+//   },
+// };
+
+// //My decision
+// //1
+// const gameEvents = new Set(events.values());
+// console.log(gameEvents);
+// //2
+// events.delete(75);
+// console.log(events);
+// //3
+// console.log(`On average, an event happened every ${90 / events.size} minutes`);
+// //4
+// for (const [time, event] of events) {
+//   const half = time <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${time}: ${event}`);
+// }
+
+/* -----------------------------------------------(Method String one) -------------------------------------- */
+// const airline = 'SkyUp Airline';
+// const airplane = 'Boeing 737';
+
+// // console.log(airplane[0]);
+// // console.log(airplane[1]);
+// // console.log(airplane[2]);
+// // console.log('SkyUp'[0]);
+
+// // console.log(airline.length);
+// // console.log('Boeing 737'.length);
+
+// // console.log(airline.indexOf('U'));
+// // console.log(airplane.indexOf('7'));
+// // console.log(airplane.lastIndexOf('7'));
+// // console.log(airline.indexOf('Up'));
+// // console.log(airline.indexOf('up'));
+
+// // console.log(airplane.slice(4)); // ng 737
+// // console.log(airplane.slice(7)); // 737
+// // console.log(airplane.slice(0, 6)); // Boeing
+// // console.log(airline.slice(0, airline.indexOf(' ')));
+// // console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// // console.log(airline.slice(-1));
+// // console.log(airline.slice(2, -2));
+
+// const checkMidleSeat = function (seat) {
+//   //B and E are middle seat
+//   const seatLetter = seat.slice(-1);
+//   if (seatLetter === 'B' || seatLetter === 'E') {
+//     console.log('This is a middle seat.');
+//   } else {
+//     console.log('This is not a middle seat.');
+//   }
+// };
+
+// checkMidleSeat('21A');
+// checkMidleSeat('7B');
+// checkMidleSeat('14E');
+
+/* -----------------------------------------------(Method String two) -------------------------------------- */
+// const airline = 'SkyUp Airline';
+// const airplane = 'Boeing 737';
+
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+//Fix the passenger name
+// const passengerName = 'LiNDa';
+// const passengerNameLower = passengerName.toLowerCase();
+// console.log(passengerNameLower);
+// const passengerNameFixed = passengerNameLower[0].toUpperCase() + passengerNameLower.slice(1);
+// console.log(passengerNameFixed);
+
+// //Email validation
+// const email = 'someemail@gmail.com';
+// const loginEmail = '  SomeEmail@Gmail.com \n';
+
+// const emailLower = loginEmail.toLowerCase();
+// const emailTrimmed = emailLower.trim();
+// console.log(emailTrimmed);
+
+// const emailNormalized = loginEmail.toLowerCase().trim();
+// console.log(emailNormalized);
+// console.log(email === emailNormalized);
+
+// // Replacing
+// const ticketPriceEU = '197,23$';
+// const ticketPriceUS = ticketPriceEU.replace(',', '.').replaceAll('$', '&');
+// console.log(ticketPriceUS);
+
+//Methods return boolean
+
+// console.log(airplane);
+// console.log(airplane.includes('737'));
+// console.log(airplane.includes('747'));
+
+// console.log(airplane.startsWith('Bo'));
+// console.log(airplane.startsWith('Ba'));
+
+// console.log(airplane.endsWith('37'));
+// console.log(airplane.endsWith(' 737'));
+// console.log(airplane.endsWith('  737'));
+
+/* -----------------------------------------------(Method String three) -------------------------------------- */
+//split join
+// const [firstName, lastName] = 'Rakhmetov Nurbolat'.split(' ');
+// console.log('My+name+Nurbolat.'.split('+'));
+// console.log(firstName, lastName);
+
+// console.log(['Mr.', firstName, lastName.toUpperCase()].join(' '));
+
+// const capitalizeName = function (name) {
+//   const names = name.split(' ');
+//   const namesCapitalize = [];
+//   for (const n of names) {
+//     // namesCapitalize.push(n[0].toUpperCase() + n.slice(1).toLowerCase());
+//     namesCapitalize.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   return namesCapitalize.join(' ');
+// };
+
+// console.log(capitalizeName('rakmetov nurbolat zarkumuly'));
+
+// // padding
+// const message = 'Hi there!';
+// console.log(message.padStart(20, '-').padEnd(37, '-'));
+
+// const maskCreditCard = function (cardNumber) {
+//   // const strCardNumber = String(cardNumber);
+//   const strCardNumber = cardNumber + '';
+//   const lastNumber = strCardNumber.slice(-4);
+//   return lastNumber.padStart(strCardNumber.length, '*');
+// };
+
+// console.log(maskCreditCard(12334535646546));
+// console.log(maskCreditCard('124321341234'));
+
+// //repeat
+// const greeting = 'Hi!';
+
+// console.log(greeting.repeat(20));
+
+/* -----------------------------------------------(Task Four)------------------------------------------------*/
+// Write a program that takes a list of variable names written in underscore_case and converts them to camelCase.
+// Input will come from a textarea html element inserted into the DOM (see code below to insert elements) and the transformation will happen when the button is clicked.
+
+// Test data (for inserting into the textarea including spaces):
+
+// underscore_case
+//   first_name
+// next_Variable
+//    Calculate_AGE
+// arrived_flight
+
+// This output should appear (5 separate console.log outputs):
+// underscoreCase
+// firstName
+// nextVariable
+// calculateAge
+// arrivedFlight
+
+// Hints:
+// Remember which character defines a newline in a textbox
+// The solution should only work for a two-word variable like first_second
+// This is a tricky task, so start watching the solution in case you get stuck. Then pause and continue!
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const btn = document.querySelector('button');
+const textarea = document.querySelector('textarea');
+
+btn.style.width = '80px';
+btn.style.height = '40px';
+btn.textContent = 'button';
+
+textarea.style.width = '150px';
+textarea.style.height = '500px';
+
+const camelCase = (underscore_case) => {
+  const [text1, text2] = underscore_case.trim().toLowerCase().split('_');
+  return text1 + text2.replace(text2[0], text2[0].toUpperCase());
+};
+
+btn.addEventListener('click', function () {
+  const text = textarea.value.split('\n');
+  for (const item of text) {
+    console.log(camelCase(item));
+  }
+});
